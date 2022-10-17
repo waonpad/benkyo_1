@@ -68,25 +68,4 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::get('unreadnotifications', [NotificationController::class, 'unreadNotifications']);
     Route::post('readnotification', [NotificationController::class, 'readNotification']);
     Route::post('readallnotifications', [NotificationController::class, 'readAllNotifications']);
-
-    
-    // Wordles
-    Route::post('wordle/upsert', [WordleController::class, 'upsert']);
-    Route::get('wordle/show', [WordleController::class, 'show']);
-    Route::post('wordle/destroy', [WordleController::class, 'destroy']);
-    Route::get('wordle/search', [WordleController::class, 'search']);
-
-    // comments
-    Route::post('comment/upsert', [CommentController::class, 'upsert']);
-    Route::post('comment/destroy', [CommentController::class, 'destroy']);
-
-    // games
-    Route::post('game/create', [GameController::class, 'create']);
-    Route::get('game/show', [GameController::class, 'show']);
-    Route::get('game/search', [GameController::class, 'search']);
-    Route::post('game/entry', [GameController::class, 'entry']);
-    Route::post('game/leave', [GameController::class, 'leave']);
-    Route::post('game/ready', [GameController::class, 'ready']);
-    Route::post('game/start', [GameController::class, 'start']);
-    Route::post('game/input', [GameController::class, 'input']);
 });

@@ -15,9 +15,6 @@ import Chat from './pages/Chat';
 import PrivateChat from './pages/PrivateChat';
 import GroupChat from './pages/GroupChat';
 import Header from './components/Header';
-import Wordle from './pages/Wordle';
-import WordleManage from './pages/WordleManage';
-import Search from './pages/Search';
 import Page404 from './pages/Page404';
 import ProvideAuth, { PrivateRoute, PublicRoute } from './AuthContext' //追加
 
@@ -97,12 +94,6 @@ function App(): React.ReactElement {
                         <PrivateRoute path='/chat' exact><Chat/></PrivateRoute>
                         <PrivateRoute path='/privatechat/:id' exact><PrivateChat/></PrivateRoute>
                         <PrivateRoute path='/groupchat/:id' exact><GroupChat/></PrivateRoute>
-                        <PrivateRoute path='/wordle/create' exact><WordleManage/></PrivateRoute>
-                        <PrivateRoute path='/wordle/manage/:id' exact><WordleManage/></PrivateRoute>
-                        {/* リンクから直接飛んで来たらページ内で固有ゲームIDを付与してURLを書き換える？ */}
-                        <PrivateRoute path='/wordle/game/:id' exact><Wordle/></PrivateRoute>
-                        <PrivateRoute path='/wordle/game/:id/:game_id' exact><Wordle/></PrivateRoute>
-                        <Route path='/search' exact component={Search} />
                         <Route path='*' exact component={Page404} />
                     </Switch>
                 </Header>

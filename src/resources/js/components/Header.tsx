@@ -523,21 +523,6 @@ export default function Header({children}: Props) {
             <ListItemIcon><Group /></ListItemIcon>
             <ListItemText primary='Group Chat'></ListItemText>
           </ListItem>
-          <ListItem button component={Link} to='/wordle/create' style={{ textDecoration: 'none', color: "inherit" }}>
-            <ListItemText primary='Wordle Create'></ListItemText>
-          </ListItem>
-          <ListItem button component={Link} to='/wordle/manage/1' style={{ textDecoration: 'none', color: "inherit" }}>
-            <ListItemText primary='Wordle Manage 1'></ListItemText>
-          </ListItem>
-          <ListItem button component={Link} to='/search' style={{ textDecoration: 'none', color: "inherit" }}>
-            <ListItemText primary='Search'></ListItemText>
-          </ListItem>
-          <ListItem button component={Link} to='/wordle/game/1' style={{ textDecoration: 'none', color: "inherit" }}>
-            <ListItemText primary='Wordle Game 1'></ListItemText>
-          </ListItem>
-          <ListItem button component={Link} to='/wordle/game/1/1' style={{ textDecoration: 'none', color: "inherit" }}>
-            <ListItemText primary='Wordle Game 1 - 1'></ListItemText>
-          </ListItem>
 
 
           {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
