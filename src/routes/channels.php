@@ -45,15 +45,3 @@ Broadcast::channel('group_post.{group_id}', function ($user, $group_id){
 });
 
 // UserOriginalChannels
-
-Broadcast::channel('game.{game_id}', function ($user, $game_id){
-    $user_id = GameUser::where('game_id', $game_id)->where('user_id', $user->id)->first()->user_id;
-
-   if ($user->id === $user_id) {
-        return [
-            'id' => $user->id,
-            'screen_name' => $user->screen_name,
-            'name' => $user->name,
-        ];
-    }
-});

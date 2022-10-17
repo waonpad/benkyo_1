@@ -5,9 +5,9 @@ RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 
 # install packages
-RUN echo 'nameserver 8.8.8.8' >> /etc/resolv.conf && \
-apk update && \
-apk add git nodejs npm
+# RUN echo 'nameserver 8.8.8.8' >> /etc/resolv.conf && \
+RUN apk update
+RUN apk add git nodejs npm
 
 # install php extensions
 RUN docker-php-ext-install pdo pdo_mysql
